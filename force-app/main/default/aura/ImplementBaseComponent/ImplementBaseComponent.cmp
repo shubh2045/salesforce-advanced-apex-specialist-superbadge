@@ -1,0 +1,19 @@
+<aura:component extends="c:BaseAuraComponent" implements="flexipage:availableForAllPageTypes" access="global" 
+                controller = "ApexController">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="accountList" type="Object[]" />
+    <aura:attribute name="contactList" type="Object[]" />
+    
+    <lightning:card title="Accounts" iconName="standard:account" footer="Footer Text">
+        <aura:iteration items="{!v.accountList}" var="account">
+            <p class="slds-p-horizontal_medium">{!account.Name}</p><br/>
+        </aura:iteration>
+    </lightning:card>
+    
+    <lightning:card title="Contacts" iconName="standard:contact" footer="Footer Text">
+        <aura:iteration items="{!v.contactList}" var="contact">
+            <p class="slds-p-horizontal_medium">{!contact.FirstName}&nbsp;{!contact.LastName}</p><br/>
+        </aura:iteration>
+    </lightning:card>
+    
+</aura:component>
