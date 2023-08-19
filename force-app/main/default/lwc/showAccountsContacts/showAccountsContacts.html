@@ -1,0 +1,68 @@
+<template>
+    <lightning-card title="Accounts with Contacts">
+        <div class="slds-var-m-around_medium">
+            <strong>View 1</strong>
+            <template if:true={accounts}>
+                <template for:each={accounts} for:item="account">
+                    <div key={account.Id}>
+                        <p>{account.Name}
+                            
+                        </p>
+                        <lightning-button label="Show Contacts" data-id={account.Id} onclick={handleClick}></lightning-button>
+                    </div>
+                </template>
+            </template>
+            <template if:true={contacts}>
+                <div>
+                    <template for:each={contacts} for:item="con">
+                        <p key={con.Id} class="con-id">
+                            <template if:true={expression}></template>
+                            {con.LastName}
+                        </p>
+                    </template>
+                </div>
+            </template>
+        </div>
+        <div class="slds-var-m-around_medium">
+            <p>
+                <strong>View 2</strong>
+                <template if:true={accNames}>
+                    <!-- <lightning-combobox label="Accounts"
+                                    name="Accounts"
+                                    options={controllingPicklist} 
+                                    value={selectedControlling}
+                                    onchange={fetchDependentValue}
+                                    >
+                    </lightning-combobox> -->
+                </template>
+            </p>
+        </div>
+        <div class="slds-var-m-around_medium">
+            <p>
+                <strong>View 3</strong>
+                <template if:true={accounts}>
+                    <template for:each={accounts} for:item="account">
+                        <div key={account.Id}>
+                            <a href="javascript:void(0);" onclick={accountClick} data-value={account.Id}>
+                                {account.Name}
+                            </a>
+                        </div>
+                    </template>
+                </template>
+                <template if:true={contacts}>
+                    <div>
+                        <template for:each={contacts} for:item="con">
+                            <p key={con.Id} class="con-id">
+                                {con.LastName}
+                            </p>
+                        </template>
+                    </div>
+                </template>
+            </p>
+        </div>
+        <div class="slds-var-m-around_medium" role="button">
+
+        </div>
+    </lightning-card>
+    
+</template>

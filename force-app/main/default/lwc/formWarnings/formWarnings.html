@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Custom warnings on fields">
+        <div class="slds-var-m-around_medium">
+        
+            <lightning-input type="text" label="Account Name" value={account.Name} data-fieldname="Name" onchange={setAccountData} required></lightning-input>
+            <lightning-input type="text" label="Industry" value={account.Industry} data-fieldname="Industry" onchange={setAccountData}></lightning-input>
+            <lightning-input type="number" label="Contact No" value={account.Phone} data-fieldname="Phone" onchange={setAccountData}></lightning-input>
+            <lightning-input type="email" label="Email" value={account.Email} data-fieldname="Email" onchange={setAccountData}></lightning-input>
+        
+            <div class="slds-align_absolute-center slds-var-m-around_medium">
+                <lightning-button variant="brand-outline" label="Reset" onclick={handleReset}>
+                </lightning-button>&nbsp;&nbsp;
+                <lightning-button variant="brand" label="Submit" onclick={handleSubmit}>
+                </lightning-button>
+            </div>
+        </div>
+    </lightning-card>
+    
+</template>
