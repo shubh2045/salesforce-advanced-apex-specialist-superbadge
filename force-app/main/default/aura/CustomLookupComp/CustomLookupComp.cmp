@@ -1,0 +1,15 @@
+<aura:component controller="CustomLookupAuraService">
+    
+    <aura:attribute name="objName" type="String" default="Account"/>
+    <aura:attribute name="fieldName" type="String" default="Name"/>
+    <aura:attribute name="iconName" type="String" default="standard:account"/>
+    <aura:attribute name="recordList" type="Object"/>
+    <aura:handler name="LookupEvt" event="c:CustomLookupEvt" action="{!c.handleEvent}"/>
+    <div>
+        <c:CustomLookupSearch/>
+        
+    </div>
+    <div>
+        <c:CustomListComp recordList="{!v.recordList}" iconName="{!v.iconName}"/>
+    </div>
+</aura:component>

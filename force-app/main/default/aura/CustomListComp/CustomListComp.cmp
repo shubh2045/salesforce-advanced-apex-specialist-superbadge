@@ -1,0 +1,17 @@
+<aura:component >
+    <aura:attribute name="recordList" type="object"/>
+    <aura:attribute name="iconName" type="String"/>
+    
+    <div class="slds-p-around_small">
+        <aura:iteration items="{!v.recordList}" var="item" indexVar="index">
+            <lightning:pill label="{!item.Name}">
+                <aura:set attribute="media">
+                    <lightning:icon iconName="{!v.iconName}"/>
+                </aura:set>
+            </lightning:pill>
+            <br/>
+        </aura:iteration>
+    </div>
+    
+    
+</aura:component>
