@@ -1,0 +1,67 @@
+.side-panel {
+    position: fixed;
+    top: 30%;
+	right: 0;
+    //transform: translateY(-50%);
+    width: 1%;
+    padding: 7px;
+    /* height: 35%; Increase the height */
+    background-color: rgb(217, 72, 72); /* Background color */
+    overflow: hidden;
+    transition: width 0.3s;
+    color: white; /* Color for text */
+    text-align: center; /* Center text */
+    z-index: 100;
+    border-radius:50px 0 0 50px;
+
+}
+
+.side-panel.expanded {
+    width: 120px;
+    padding: 0;
+    border-radius:0;
+}
+
+/* .side-panel.expanded:active {
+    background-color: rgba(118, 110, 110, 0.66);
+} */
+
+.quick-links {
+    
+    font-weight: bold; /* Make the text bold */
+    text-align: center;
+}
+
+.expanded-options {
+    display: none; /* Hide initially */
+}
+
+.side-panel.expanded .expanded-options {
+    display: block; /* Show when expanded */
+}
+
+.side-panel.expanded .quick-links {
+    display: none; /* Show when expanded */
+}
+
+.side-panel ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Remove margin */
+}
+
+.side-panel li {
+    /* margin: 10px 0; */
+}
+
+.side-panel a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    display: block;
+    /* padding: 20px 0;
+	height: 20px; */
+}
+
+.side-panel a:hover {
+    background-color: #555;
+}

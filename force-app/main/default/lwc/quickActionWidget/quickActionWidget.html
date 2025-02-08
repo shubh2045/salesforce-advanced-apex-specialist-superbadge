@@ -1,0 +1,36 @@
+<template>
+	<div class={panelClass} onmouseover={handleMouseOver} onmouseout={handleMouseOut}>
+		<!-- Quick Links -->
+		<div class="quick-links slds-align_absolute-center">
+			Q<br>u<br>i<br>c<br>k<br><br>A<br>c<br>t<br>i<br>o<br>n<br>s
+			<!-- <div class="slds-p-top_xsmall">
+				Q<br>u<br>i<br>c<br>k
+			</div>
+				<div class="slds-p-top_xsmall">
+					<br>A<br>c<br>t<br>i<br>o<br>n<br>s
+			</div> -->
+				</div>
+				<!-- Expanded Options -->
+				<div class="expanded-options">
+					<!-- <div class="slds-p-around_medium slds-box">
+						<b>Quick Links</b>
+					</div> -->
+					<!-- <ul>
+						<template for:each={expandedOptions} for:item="option">
+							<li key={option.id}>
+								<a href={option.url} data-external={option.isExternal} onclick={handleLinkClick}
+									class="slds-box">{option.label}</a>
+							</li>
+						</template>
+					</ul> -->
+					<!-- <template for:each={expandedOptions} for:item="option">
+						<a key={option.id} href={option.url} data-external={option.isExternal} onclick={handleLinkClick}
+							class="slds-box slds-box_small">{option.label}</a>
+					</template> -->
+					<template for:each={expandedOptions} for:item="option">
+						<a key={option.id} onclick={handleLinkClick}
+							class="slds-box slds-box_small" data-label={option.label}>{option.label}</a>
+					</template>
+				</div>
+			</div>
+</template>
